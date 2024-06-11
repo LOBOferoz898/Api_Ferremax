@@ -8,8 +8,15 @@ def add_product_to_cart(product_id, quantity):
     try:
         product = Product.objects.get(id=product_id)
     except Product.DoesNotExist:
-        return {"error": "Product not found"}, 404
-
+        return {"error": "El producto no existe"}, 404
+    except:
+        return {"error": "el id debe ser un valor entero"}, 404
+    
+    try: 
+        product = Product.objects.get(quantity=quantity)
+    except:
+        pass
+    
     cart_item, created = CartItem.objects.get_or_create(product=product)
     if not created:
         cart_item.quantity += int(quantity)
