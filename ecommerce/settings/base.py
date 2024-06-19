@@ -22,6 +22,11 @@ INSTALLED_APPS = [
     'apps.common',
     'apps.inventory',
     'apps.carrito',
+    'apps.Pago',
+    'apps.Usuario',
+    'apps.Sucursal',
+    
+    
 ]
 
 MIDDLEWARE = [

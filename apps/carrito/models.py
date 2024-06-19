@@ -1,4 +1,3 @@
-# cart/models.py
 
 from django.db import models
 from apps.inventory.models import Product

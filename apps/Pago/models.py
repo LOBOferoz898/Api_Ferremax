@@ -7,6 +7,7 @@ class Pago (models.Model):
     monto_pagar = models.BigIntegerField
     usuario = models.TextField
     Metodo_Pago = models.TextField
+    
 
     def __str__(self):
         return self.name

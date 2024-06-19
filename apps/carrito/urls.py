@@ -7,7 +7,7 @@ router = DefaultRouter()
 router.register(r'cart-items', CartItemViewSet)
 
 urlpatterns = [
-    path('carro/agregar/', add_to_cart, name='agregar_productos'),
-    path('carro/pagar/',  pay_for_cart, name='pagar_carro'),
+    path('agregar/', add_to_cart, name='agregar_productos'),
+    path('pagar/',  pay_for_cart, name='pagar_carro'),
     path('',include(router.urls), name="CartItemViewSet"),
 ]

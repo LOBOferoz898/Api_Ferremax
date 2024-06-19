@@ -5,7 +5,7 @@ from django.urls import include, path
 
 
 router = DefaultRouter()
-router.register(r'products', ProductViewSet, basename='products')
+router.register(r'productos', ProductViewSet, basename='products')
 
 
 
